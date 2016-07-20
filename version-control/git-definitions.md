@@ -1,7 +1,3 @@
-# Git Definitions
-
-**Instructions: ** Define each of the following Git concepts.
-
 * What is version control?  Why is it useful?
 Version control means that there are saved versions of the same software, usually differentiating slightly due to improvements or new features, without the software being entirely rewritten. This allows developers to work on an existing version of software while keeping previous versions for reference, and also without having to start over in writing software.
 * What is a branch and why would you use one?
