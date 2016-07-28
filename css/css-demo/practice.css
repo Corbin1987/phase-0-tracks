@@ -11,3 +11,23 @@
 .ul {
 	font-size: .8em;
 }
+
+.job:hover {
+	background-color: blue;
+}
+
+#volunteer-experience:hover {
+	background-color: blue;
+}
+
+#personal-objective:hover {
+	background-color: blue;
+}
+
+#contact-info:hover {
+	background-color: blue;
+}
+
+section ul li:hover {
+	color: red;
+}
