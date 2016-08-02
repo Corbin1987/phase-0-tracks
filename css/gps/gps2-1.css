@@ -1,45 +1,47 @@
-/* 
-position columns side by side
-*/
 body {
-  width: 100%;
+   width: 99%;
 }
-h1, h2 {
-  text-align: center;
-}
+
 section {
-  background-color: blue;
-  width: 40%;
-  margin-left: 5%;
-  vertical-align: top;
-  display: inline-block;
-  padding: 1.2em;
-  color: white;
-  border-radius: 5px;
-  border: 2px dotted white;
+ background-color: blue;
+ width: 40%;
+ margin-left: 5%;
+ vertical-align: top;
+ display: inline-block;
+ padding: 1.2em;
+ color: white;
+ border-radius: 5px;
+ border: 2px dotted white;
 }
-header {
-  
-}
-@media only screen and (max-width: 540px){
-  body {
-    background-color: blue;      
-  }
+
+h1, h2 {
+   text-align: center
 }
 
 section a {
-  color: white;
+   color: white;
+}
+
+header p {
+   text-align: center;
+   margin-left: 5%;
 }
 
 footer {
-  margin: auto;
-  margin-top: 20px;
+   width: 100%;
+   margin:auto;
+   text-align: center;
+   margin-top: 20px;
 }
 
 @media only screen and (max-width: 540px) {
-  section {
-    width: 70%;
-    margin: auto;
-    
-  }
+   section {
+       width: 75%;
+       margin: auto;
+       display: block;
+       margin-top: 20px;
+   }
+   body {
+       width: 100%;
+   }
 }
