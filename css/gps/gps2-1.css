@@ -1,0 +1,45 @@
+/* 
+position columns side by side
+*/
+body {
+  width: 100%;
+}
+h1, h2 {
+  text-align: center;
+}
+section {
+  background-color: blue;
+  width: 40%;
+  margin-left: 5%;
+  vertical-align: top;
+  display: inline-block;
+  padding: 1.2em;
+  color: white;
+  border-radius: 5px;
+  border: 2px dotted white;
+}
+header {
+  
+}
+@media only screen and (max-width: 540px){
+  body {
+    background-color: blue;      
+  }
+}
+
+section a {
+  color: white;
+}
+
+footer {
+  margin: auto;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 540px) {
+  section {
+    width: 70%;
+    margin: auto;
+    
+  }
+}
