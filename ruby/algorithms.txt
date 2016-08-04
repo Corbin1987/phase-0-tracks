@@ -31,4 +31,31 @@ Assuming your personal elevator robot is standing outside the elevator doors, be
 
 Release 1
 
-  
+This algorithm is for making coffee in the morning, which I might need to reference if I am very tired in the morning.
+
+1. Check the water level in the electric kettle. 
+	a. If it is below 2 on the outside plastic window pane, add more water to the kettle.
+	b. If it is at or above 2 on the outside plastic window pane, proceed to next step.
+2. Turn on kettle.
+3. Get aeropress supplies, grinder, coffee, and coffee cup.
+4. Use scoop to measure 2 scoops of coffee into grinder.
+5. Set grinder to fine grind.
+6. Grind coffee.
+7. Place paper filter into aeropress.
+8. Place funnel on top of aeropress.
+9. Put coffee into aeropress tube through funnel.
+10. Remove funnel.
+11. Place aeropress tube on top of cup.
+12. Check electric kettle.
+	a. If if is not done with boiling, wait for kettle switch to turn off. This operation will become faster if the kettle is not watched.
+	b. If kettle switch has turned off, remove kettle from its base.
+13. Pour water into aeropress tube up to level 2.
+14. Use stir stick to stir coffee and boiling water for 10 seconds.
+15. Remove stir stick and locate coffee tube plunger.
+16. Use coffee tube plunger to plunge coffee and water through filter for 20-30 seconds.
+17. When finished, remove filter from aeropress tube.
+18. Push the coffee tube plunger all the way through the tube to push the coffee grounds out of the tube into the trash.
+19. Add hot water from kettle to coffee cup to desired level.
+20. Add cream to desired level.
+21. Stir coffee and cream.
+22. Drink coffee and then repeat steps 1-21, since I always have two cups of coffee in the morning.
