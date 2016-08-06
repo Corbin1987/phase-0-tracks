@@ -51,7 +51,7 @@ while current_count < number_of_employees do
 		puts "Probably a vampire."
 	elsif (age == true) && (garlic == true && insurance == true)
 		puts "Almost certainly a vampire."
-	elsif (age == false) && (garlic == false) && (insurance == false)
+	elsif (age != true) && (garlic != true) && (insurance != true)
 		puts "Probably not a vampire."
 	elsif $allergies == true
 		puts "Probably a vampire."
