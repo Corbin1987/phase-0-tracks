@@ -1,7 +1,6 @@
-def vampire_test
-	puts "How many new employees will be processed today?"
-	number_of_employees = gets.to_i
-	current_count = 0
+puts "How many new employees will be processed today?"
+number_of_employees = gets.to_i
+current_count = 0
 	while current_count < number_of_employees do
 		puts "Welcome to Werewolf Inc. What is your name?"
 		name = gets.chomp
@@ -12,6 +11,18 @@ def vampire_test
 		garlic = gets.chomp
 		puts "Would you like to enroll in the company's health insurance?"
 		insurance = gets.chomp
+	loop do
+		puts "Do you have any allergies?"
+		$allergies = gets.chomp
+		if $allergies == "sunshine"
+		$allergies = true
+		break
+		end
+		if $allergies == "done"
+		$allergies = false
+		break
+		end
+	end
 		if age <= (2016-dob)
 			age = false
 		else
@@ -42,9 +53,10 @@ def vampire_test
 			puts "Almost certainly a vampire."
 		elsif (age == false) && (garlic == false) && (insurance == false)
 			puts "Probably not a vampire."
+		elsif $allergies == true
+			puts "Probably a vampire."
 		else
 			puts "Results inconclusive."
 		end
 		current_count += 1
 	end
-end
