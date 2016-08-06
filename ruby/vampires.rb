@@ -3,11 +3,12 @@ def vampire_test
 	name = gets.chomp
 	puts "How old are you? What year were you born?"
 	age = gets.to_i
-	puts = "Our company cafeteria serves garlic bread. Should we order some for you?"
+	dob = gets.to_i
+	puts "Our company cafeteria serves garlic bread. Should we order some for you?"
 	garlic = gets.chomp
 	puts "Would you like to enroll in the company's health insurance?"
 	insurance = gets.chomp
-	if age <= (2016-age)
+	if age <= (2016-dob)
 		age = true
 	else
 		age = false
@@ -24,14 +25,23 @@ def vampire_test
 	else
 		insurance = false
 	end
-	if age && (garlic || insurance)
-		puts "Probably not a vampire."
-	elsif !age && ( !garlic || !insurance)
-		puts "Probably a vampire."
-	elsif !age && !garlic && !insurance
-		puts "Almost certainly a vampire."
+	if name.include? "Drake Cula"
+		name = true
+		elsif name.include? "Tu Fang"
+		name = true
 	else
-		puts "Results inconclusive"
+		name = false
+	end
+	if age && (garlic || insurance) && !name
+		puts "Probably not a vampire."
+	elsif !age && ( !garlic || !insurance) && !name
+		puts "Probably a vampire."
+	elsif !age && !garlic && !insurance && !name
+		puts "Almost certainly a vampire."
+	elsif name
+		puts "Definitely a vampire."
+	else
+		puts "Results inconclusive."
 	end
 end
 
