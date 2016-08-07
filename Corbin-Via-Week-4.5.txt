@@ -1,0 +1,27 @@
+Corbin Via Week 4.5: Debugging
+
+Regarding how to avoid bugs, I feel that I am doing some aspects well but need to improve on Git workflow.
+
+Naming variables is something that I feel I do well. I try to use descriptive variables in my code. On CSS documents, 
+I put the tag in comments next to the CSS rule to give myself a reminder of what I am editing.
+
+Indenting code is also an important part of writing code for me. I have been consistent with this and intend to continue 
+proper formatting of my code.
+
+As far as packing too much code onto one line, I'm not sure if I have been making this error. I have not written very much 
+code, but I seem to keep it concise. This along with indenting helps to see what is happening with my code.
+
+Reading code is something that I need to improve. I do like to read examples of code, especially when they are combined 
+with explanations, but there is always more that I could review.
+
+Testing code frequently is something that I have been doing fairly often. One problem that I have is that I have sometimes
+tested code after writing a lot out, and I then test and re-test after making small edits. I could improve on this by doing 
+many tests throughout writing code.
+
+Committing frequently is definitely the area in which I need to improve most. I have been getting better at this, and I feel that
+throughout using Git workflow, I have been writing meaningful commit messages. However, initially I did not commit often. 
+This is something I need to keep consistent.
+
+Overall, I need to continue to use my skills in writing code that is easy to follow with using meaningful variables and proper 
+syntax, as well as to address issues with Git workflow. Git workflow has caused me the most trouble thus far, so it is an 
+area for constant improvement.
