@@ -23,7 +23,7 @@ while current_count < number_of_employees do
 		break
 		end
 	end
-	if age <= (2016-dob)
+	if age == (2016-dob)
 		age = false
 	else
 		age = true
