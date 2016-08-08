@@ -7,11 +7,12 @@
 def encrypt(str)
    index = 0
    while index < str.length
-      if str[index] = "z"
-       	str[index] = "a"
-       	break
-       end
-       str[index] = str[index].next 
+		if str[index] == "z"
+			str[index] = "a"
+		elsif str[index] == " "
+		else 
+			str[index] = str[index].next
+		end
        index += 1
    end
    p str
@@ -32,7 +33,12 @@ encrypt("abc") #should return "bcd"
 encrypt("zed") #should return "afe"
 decrypt("bcd") #should return "abc"
 decrypt("afe") #should return "zed"
+<<<<<<< HEAD
 # decrypt(encrypt("swordfish")) # Because both methods are available in the global scope, "swordfish" can be changed with both methods. 
+=======
+#decrypt(encrypt("swordfish")) #Because both methods are available in the global scope, "swordfish" can be changed with both methods.
+#Ruby will first evaluate the method within another method, then the one outside of it.
+>>>>>>> 4.6
 
 puts "Would you like to encrypt or decrypt a password?"
 user_input = gets.chomp
