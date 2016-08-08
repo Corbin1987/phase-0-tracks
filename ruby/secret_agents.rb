@@ -33,12 +33,8 @@ encrypt("abc") #should return "bcd"
 encrypt("zed") #should return "afe"
 decrypt("bcd") #should return "abc"
 decrypt("afe") #should return "zed"
-<<<<<<< HEAD
-# decrypt(encrypt("swordfish")) # Because both methods are available in the global scope, "swordfish" can be changed with both methods. 
-=======
 #decrypt(encrypt("swordfish")) #Because both methods are available in the global scope, "swordfish" can be changed with both methods.
 #Ruby will first evaluate the method within another method, then the one outside of it.
->>>>>>> 4.6
 
 puts "Would you like to encrypt or decrypt a password?"
 user_input = gets.chomp
