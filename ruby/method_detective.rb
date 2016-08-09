@@ -18,6 +18,7 @@
 # => "STOP! YOU’RE UNDER ARREST!"
 
 "the usual".concat " suspects"
+"the usual".insert(-1, " suspects")
 #=> "the usual suspects"
 
 " suspects".replace "the usual suspects"
