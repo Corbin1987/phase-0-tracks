@@ -10,22 +10,22 @@
 "zom".insert(-2, "o")
 # => “zoom”
 
-# "enhance".<???>
+"enhance".center (4)
 # => "    enhance    "
 
 "Stop! You’re under arrest!".upcase
 # => "STOP! YOU’RE UNDER ARREST!"
 
-# "the usual".<???>
+"the usual".concat " suspects"
 #=> "the usual suspects"
 
-# " suspects".<???>
+# " suspects".replace "the usual suspects"
 # => "the usual suspects"
 
 "The case of the disappearing last letter".chop
 # => "The case of the disappearing last lette"
 
-# "The mystery of the missing first letter".<???>
+# "The mystery of the missing first letter".delete "T"
 # => "he mystery of the missing first letter"
 
 # "Elementary,    my   dear        Watson!".<???>
