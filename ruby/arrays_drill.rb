@@ -32,7 +32,7 @@ dr_seuss.insert(2, "Wacky Wednesday")
 p dr_seuss
 dr_seuss.shift
 p dr_seuss
-p "It is #{dr_seuss.include?("Green Eggs and Ham")} that the Dr. Suess array includes Green Eggs and Ham."
+p "It is #{dr_seuss.include?("Green Eggs and Ham")} that the Dr. Seuss array includes Green Eggs and Ham."
 
 thomas_the_train = ["Percy", "Gordon", "Mavis", "Thomas"]
 
@@ -48,5 +48,5 @@ add_to_array([1, 2, 3], 4)
 add_to_array(thomas_the_train, "Emily")
 #=> ["Percy", "Gordon", "Mavis", "Thomas", "Emily"]
 
-add_to_array(dr_suess, "Hop on Pop")
+add_to_array(dr_seuss, "Hop on Pop")
 #=> ["Oh the places you'll go!", "Cat in the Hat", "Fox in Socks", "One Fish, Two Fish", "Green Eggs and Ham", "Hop on Pop"]
