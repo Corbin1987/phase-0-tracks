@@ -1,12 +1,16 @@
+#Ask for favorite movies.
 puts "What are two of your favorite movies?"
 movie1 = gets.chomp
 movie2 = gets.chomp
-
+#Passes status message prior to block.
+puts movie1
+puts movie2
+#Define method with yield.
 def movie_critic
 	puts "I've seen both of those movies."
 	yield
 end
-
+#Begin code block.
 movie_critic { puts "#{movie1} is great, but #{movie2} is crappy."}
 #Define an array.
 movie_array = ["The Nightmare Before Christmas", "Fantastic Mr. Fox", "Chicken Run", "Coraline"]
@@ -31,31 +35,51 @@ p movie_characters
 movie_characters.each do |title, character|
 	puts "#{character} is the main character of #{title}."
 end
-
+#Permanently modify array.
 movie_array.map! do |movie|
 	puts movie
 	movie.swapcase
 end
-
+#Printing array after .map!
 puts "After .map call"
 p movie_array
-
+#Calling array for Release 2
 movie_array = ["The Nightmare Before Christmas", "Fantastic Mr. Fox", "Chicken Run", "Coraline"]
-
+#Delete array item for condition met.
 movie_array.delete_if {|movie| movie.length <= 8}
 p movie_array
-
+#Filter array item for condition met.
 movie_array.keep_if {|movie| movie.length > 15}
 p movie_array
 
 movie_array.select! {|movie| movie.include?("x")}
 p movie_array
-
+#Redefine array for drop_while execution.
 movie_array = ["The Nightmare Before Christmas", "Fantastic Mr. Fox", "Chicken Run", "Coraline"]
 
 movie_array.drop_while {|movie| movie.length > 15}
-# A method that iterates through the items, deleting any that meet a certain condition (for example, deleting any numbers that are less than 5).
-# A method that filters a data structure for only items that do satisfy a certain condition (for example, keeping any numbers that are less than 5).
-# A different method that filters a data structure for only items satisfying a certain condition -- Ruby offers several options!
-# A method that will remove items from a data structure until the condition in the block evaluates to false, then stops 
-# (you may not find a perfectly working option for the hash, and that's okay).
+#Calling hash for Release 2.
+movie_characters = {
+	"The Force Awakens" => "Rey",
+	"Interstellar" => "Cooper",
+	"Mission: Impossible" => "Ethan Hunt",
+	"Gladiator" => "Maximus"
+}
+#Delete hash item for condition met.
+movie_characters.delete_if {|title, character| title.length < 12}
+p movie_characters
+#Filter hash item for condition met.
+movie_characters.keep_if {|title, character| title.length == 12}
+p movie_characters
+#Redefine array for .select!
+movie_characters = {
+	"The Force Awakens" => "Rey",
+	"Interstellar" => "Cooper",
+	"Mission: Impossible" => "Ethan Hunt",
+	"Gladiator" => "Maximus"
+}
+
+movie_characters.select! {|title, character| character == "Rey"}
+p movie_characters
+#Check hash for value input.
+movie_characters.has_value? ("Rey")
