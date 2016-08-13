@@ -84,3 +84,14 @@ vehicle = {
 		"fuel tank"
 	]
 }
+
+p vehicle[:transmission]
+# => [{:transmission_type=>["automatic", "manual", "CVT", "semi-automatic"]}, "axles", "cv joints", "differential", "clutch"]
+p vehicle[:transmission][0]
+# => {:transmission_type=>["automatic", "manual", "CVT", "semi-automatic"]}
+p vehicle[:engine][1]
+# => "engine block"
+p vehicle[:fuel_system]
+# => ["fuel pump", "fuel injector", "fuel tank"]
+p vehicle[:exhaust].last
+# => "muffler"
