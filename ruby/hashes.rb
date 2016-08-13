@@ -31,7 +31,7 @@ client = {
 	}
 #Welcome message
 puts "Welcome interior designer! Please input information about your new client. For any output with a question mark, please enter true/false."
-
+#Prompt user for information
 puts "Name:"
 name = gets.chomp
 client[:name] = name
@@ -45,21 +45,32 @@ rooms = gets.chomp
 client[:number_of_rooms] = rooms
 
 puts "Children?"
-user_input4 = gets.chomp
-client[:children?] = user_input4
-	puts "Decor theme:"
-	user_input5 = gets.chomp
-	client[:decor_theme] = user_input5
-	puts "Favorite color:"
-	user_input6 = gets.chomp
-	client[:favorite_color] = user_input6
-	puts "Furniture in room?"
-	user_input7 = gets.chomp
-	client[:furniture_in_room?] = user_input7
-	puts "Room lighting:"
-	user_input8 = gets.chomp
-	client[:room_lighting] = user_input8
-	puts "Pets?"
-	user_input9 = gets.chomp
-	client[:pets?] = user_input9
+children = gets.chomp
+client[:children?] = children
+
+puts "Decor theme:"
+decor = gets.chomp
+client[:decor_theme] = decor
+
+puts "Favorite color:"
+color = gets.chomp
+client[:favorite_color] = color
+
+puts "Furniture in room?"
+furniture = gets.chomp
+client[:furniture_in_room?] = furniture
+
+puts "Room lighting:"
+lighting = gets.chomp
+client[:room_lighting] = lighting
+
+puts "Pets?"
+pets = gets.chomp
+client[:pets?] = pets
 #Ask for any edits
+puts "Would you like to edit any of this information? Please enter yes/no."
+user_input = gets.chomp
+if user_input == "no"
+	p client
+elsif user_input == "yes"
+end
