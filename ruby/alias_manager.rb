@@ -31,7 +31,7 @@ def spy_alias(name) #Felicia Torres
 			letter = "v"
 		# Edge case
 		elsif letter == "z"
-			letter = "a"
+			letter = "b"
 		# Conditions for uppercase vowels
 		elsif letter == "A"
 			letter = "E"
@@ -54,7 +54,7 @@ def spy_alias(name) #Felicia Torres
 			letter = "V"
 		# Edge case
 		elsif letter == "Z"
-			letter = "A"
+			letter = "B"
 		# All other letters
 		else letter = letter.next
 		end
