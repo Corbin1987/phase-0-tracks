@@ -32,16 +32,19 @@
 
 # Swap the first and last name.
 
-name to array
-reverse array
-letters = "Felicia Torres".split(' ')
-letters.reverse!
-p letters
-new_letters = letters.join(' ')
-p new_letters
-new_new_letters = new_letters.split('')
-p new_new_letters
-new_new_letters.map!  do |letter|
+#name to array
+#reverse array
+#join reversed names
+#separate into new array of letters
+def change_name_order (name)
+	name = name.split(' ')
+	reversed_name = name.reverse!
+	reversed_name.join(' ').downcase
+	reversed_name.split(' ')
+end
+
+def change_letters
+	reversed_name.map!  do |letter|
 	if letter == " "
 		letter = " "
 	elsif letter == "a"
@@ -64,9 +67,15 @@ new_new_letters.map!  do |letter|
 	letter = "p"
 	elsif letter == "t"
 	letter = "v"
-else letter = letter.next
+	else letter = letter.next
+	end
+	spy_name = reversed_name.join ('')
+	spy_name.capitalize!
 end
+
+loop do
+	puts "Please enter a name to change. Enter 'q' to exit the program."
+	user_input = gets.chomp
+	puts change_name_order(user_input)
+	break if user_input == 'q'
 end
-#abcdefghijklmnopqrstuvwxyz
-even_newer = new_new_letters.join ('')
-even_newer.capitalize!
