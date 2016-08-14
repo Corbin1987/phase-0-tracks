@@ -1,35 +1,15 @@
-# Swapping the first and last name.
-# Changing all of the vowels (a, e, i, o, or u) to the next vowel in 'aeiou', 
-# and all of the consonants (everything else besides the vowels) to the next consonant in the alphabet. 
-# So 'a' would become 'e', 'u' would become 'a', and 'd' would become 'f'.
-# If you get really and truly stuck, just write an alias method that loops through the original name and 
-# changes the letters somehow, without worrying about implementing this particular algorithm. 
-# It's really not worth stressing about. Simply attempting the algorithm will help you improve, even if you didn't quite get there.
+# Business Logic
 
-# When will it be helpful to convert the string to an array to work with it more easily?
-# How will you figure out whether a letter is a vowel?
-# How will you deal with the fact that some letters are uppercase?
-# How will you handle edge cases?
-# You may find it helpful to write additional methods -- one for each job -- and then combine them. 
-# It's less overwhelming, for instance, to start converting your algorithm to code by writing a next_vowel method that takes a vowel 
-# character and returns the next vowel character. Once you know that small piece works because you've tested it with a few different vowels, 
-# you can use it in your program and trust that it's unlikely to be the source of any bugs that come up. This is a great way to make steady progress.
-
-# If you do successfully implement the algorithm, "Felicia Torres" will become "Vussit Gimodoe", which is a rather odd name. 
-# Provide a user interface that lets a user enter a name and get a fake name back. Let the user do this repeatedly until 
-# they decide to quit by typing 'quit'. (They might just hit Enter to continue.)Use a data structure to store the fake names as they are entered. 
-# When the user exits the program, iterate through the data structure and print all of the data the user entered. A sentence like "Vussit Gimodoe is 
-# actually Felicia Torres" or "Felicia Torres is also known as Vussit Gimodoe" for each agent is fine.
-# # Submit the GitHub URL of your Ruby file to complete this challenge. Request your code review using this form (Links to an external site.).
-
-def spy_alias(name)
-	name = name.split(' ')
-	name.reverse!
-	reversed_name = name.join(' ').downcase
-	array_name = reversed_name.split('')
+def spy_alias(name) #Felicia Torres
+	name = name.split(' ') # => ["Felicia", "Torres"]
+	name.reverse! # => ["Torres", "Felicia"] 
+	reversed_name = name.join(' ') # =>"Torres Felicia"
+	array_name = reversed_name.split('') # => ["T", "o", "r", "r", "e", "s", " ", "F", "e", "l", "i", "c", "i", "a"]
 	array_name.map!  do |letter|
+		# Edge case
 		if letter == " "
 			letter = " "
+		# Conditions for vowels	
 		elsif letter == "a"
 			letter = "e"
 		elsif letter == "e"
@@ -40,6 +20,7 @@ def spy_alias(name)
 			letter = "u"
 		elsif letter == "u" 
 			letter = "a"
+		# Conditions for consonants skipping vowels
 		elsif letter == "d"
 			letter = "f"
 		elsif letter == "h"
@@ -48,8 +29,10 @@ def spy_alias(name)
 			letter = "p"
 		elsif letter == "t"
 			letter = "v"
+		# Edge case
 		elsif letter == "z"
 			letter = "a"
+		# Conditions for uppercase vowels
 		elsif letter == "A"
 			letter = "E"
 		elsif letter == "E"
@@ -60,6 +43,7 @@ def spy_alias(name)
 			letter = "U"
 		elsif letter == "U" 
 			letter = "A"
+		# Conditions for uppercase consonants skipping vowels
 		elsif letter == "D"
 			letter = "F"
 		elsif letter == "H"
@@ -68,25 +52,36 @@ def spy_alias(name)
 			letter = "P"
 		elsif letter == "T"
 			letter = "V"
+		# Edge case
 		elsif letter == "Z"
 			letter = "A"
+		# All other letters
 		else letter = letter.next
 		end
 	end
+# =>["V", "u", "s", "s", "i", "t", " ", "G", "i", "m", "o", "d", "o", "e"]
 result = array_name.join ('')
+# => "Vussit Gimodoe"
 end
 
+#Declare variables for data storage and later output
 names_hash = {}
 user_input = nil
 spy_name = nil
+
+#User interface
 
 loop do
 	puts "Please enter a name to change. Enter 'q' to exit the program."
 	user_input = gets.chomp
 	break if user_input == 'q'
 	spy_name = spy_alias(user_input)
+	# Data storage
 	names_hash[user_input.to_sym] = "#{spy_name}"
-	puts spy_name
+	# Output
+	puts spy_name # => Vussit Gimodoe"
 end
 
-names_hash.each {|user_input, spy_name| p "#{user_input} is known as #{spy_name}."}
+# Final data output
+
+names_hash.each {|user_input, spy_name| p "#{user_input} has a spy name of: #{spy_name}."}
