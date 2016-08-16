@@ -53,6 +53,27 @@ fido.instance_of?(Puppy)
 => true
 
 spot.play_dead
-=> NoMethodError: undefined method `play_dead' for #<Puppy:0x32645b8>
-        from (irb):13
-        from C:/RailsInstaller/Ruby2.2.0/bin/irb:11:in `<main>'
+# => NoMethodError: undefined method `play_dead' for #<Puppy:0x32645b8>
+#        from (irb):13
+#        from C:/RailsInstaller/Ruby2.2.0/bin/irb:11:in `<main>'
+
+str = String.new
+=> ""
+
+str.length
+=> 0
+
+str.empty?
+=> true
+
+str += "huh."
+=> "huh."
+
+greeting = String.new("hello")
+=> "hello"
+
+greeting.length
+=> 5
+
+greeting.upcase
+=> "HELLO"
