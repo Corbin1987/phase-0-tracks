@@ -30,9 +30,29 @@ Puppy.methods
 
 duchess = Puppy.new
 => #<Puppy:0x2ffd480>
+
 fido = Puppy.new
 => #<Puppy:0x2d4fc50>
+
 spot = Puppy.new
 => #<Puppy:0x32645b8>
+
 misterpickles = Puppy.new
 => #<Puppy:0x32ea538>
+
+spot.class
+=> Puppy
+
+duchess == fido
+=> false
+
+fido.instance_of?(Array)
+=> false
+
+fido.instance_of?(Puppy)
+=> true
+
+spot.play_dead
+=> NoMethodError: undefined method `play_dead' for #<Puppy:0x32645b8>
+        from (irb):13
+        from C:/RailsInstaller/Ruby2.2.0/bin/irb:11:in `<main>'
