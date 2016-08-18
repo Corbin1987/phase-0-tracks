@@ -1,5 +1,14 @@
 # Class declaration for Santa
 class Santa
+	
+	# Print message when a new instance of Santa is created and define attributes
+	def initialize(gender, ethnicity)
+		"Initializing Santa instance..."
+		@gender = gender
+		@ethnicity = ethnicity
+		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		@age = 0
+	end
 
 	# Method for holiday greeting
 	def speak
@@ -9,11 +18,6 @@ class Santa
 	# Extrapolate cookie from argument in return message about cookie
 	def eat_milk_and_cookies(cookie)
 		p "That was a good #{cookie}!"
-	end
-
-	# Print message when a new instance of Santa is created
-	def initialize
-		"Initializing Santa instance..."
 	end
 end
 
