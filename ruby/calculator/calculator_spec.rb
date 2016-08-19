@@ -24,4 +24,12 @@ describe Calculator do
   it "multiplies two integers" do
     expect(calculator.multiply(2,3)).to eq 6
   end
+
+  it "divides two integers" do
+    expect(calculator.divide(25,5)).to eq 5
+  end
+
+  it "puts hello" do
+    expect(calculator.puts_a_string).to include "hello"
+  end
 end
