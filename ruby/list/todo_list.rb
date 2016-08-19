@@ -11,5 +11,14 @@ class TodoList
    def add_item(item)
     @list.push(item)
    end
+
+   def delete_item(item)
+    @list.delete(item)
+    @list
+   end
+
+   def get_item(index)
+    @list[index]
+  end
  
 end
