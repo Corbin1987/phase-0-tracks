@@ -168,7 +168,7 @@ example_genders = ["agender", "female", "bigender", "male", "female", "gender fl
 example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 
 count = 0
-while count < 50
+while count < 100
   santas << Santa.new(example_genders.sample, example_ethnicities.sample)
   santas.length.times do |i|
   	santas[i].age = Random.new.rand(140)
@@ -182,4 +182,8 @@ end
 
 santas.length.times do |i|
   p santas[i].age
+end
+
+santas.length.times do |i|
+  p santas[i].gender
 end
