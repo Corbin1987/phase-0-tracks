@@ -98,7 +98,24 @@ genders.length.times do |i|
   santas << Santa.new(genders[i], ethnicities[i])
 end
 
-santas[1].get_mad_at("Dasher")
+santas[1].celebrate_birthday
+# Output from program:
+# => 1
 
+santas[1].get_mad_at("Dasher")
 # Original reindeer_ranking array: ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+# Output from program:
 # New reindeer_ranking array: => ["Rudolph", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen", "Dasher"]
+
+santas[4].change_gender=("male")
+# Output from program:
+# <Santa:0x0055cc25892b18 @gender="male", @ethnicity="Irish", 
+# @reindeer_ranking=["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"], @age=0>
+
+santas[2].age
+# Output from program:
+# => 0
+
+santas[2].ethnicity
+# Output from program:
+# => "Chinese"
