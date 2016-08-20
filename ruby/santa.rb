@@ -1,6 +1,7 @@
 # Class declaration for Santa
 class Santa
-	
+	attr_reader :age, :ethnicity
+	attr_accessor :gender
 	# Print message when a new instance of Santa is created and define attributes
 	def initialize(gender, ethnicity)
 		"Initializing Santa instance..."
@@ -119,3 +120,35 @@ santas[2].age
 santas[2].ethnicity
 # Output from program:
 # => "Chinese"
+
+# Test code for Release 3
+
+santas = []
+genders = ["male", "female", "transgender", "transitioning", "undeclared"]
+ethnicities = ["Caucasian", "African-American", "Chinese", "Russian", "Irish"]
+genders.length.times do |i|
+  santas << Santa.new(genders[i], ethnicities[i])
+end
+
+santas[4].gender
+p santas[4]
+# Output from program:
+# <Santa:0x0055e663942e70 @gender="undeclared", @ethnicity="Irish", 
+# @reindeer_ranking=["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"], @age=0>
+
+santas[4].gender=("male")
+p santas[4]
+# Output from program:
+# => #<Santa:0x0055e663942e70 @gender="male", @ethnicity="Irish", 
+# @reindeer_ranking=["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"], @age=0>
+
+santas[3].age
+# Output from program:
+# => 0
+
+santas[3].ethnicity
+# Output from program:
+# => "Russian"
+
+# Test code for Release 4
+
