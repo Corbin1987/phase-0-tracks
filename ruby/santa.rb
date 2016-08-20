@@ -35,19 +35,19 @@ class Santa
 	end
 	
 	# Setter method for changing gender
-	def change_gender=(new_gender)
-		@gender = new_gender
-	end
+	# def change_gender=(new_gender)
+	#	@gender = new_gender
+	# end
 	
 	# Getter method for age
-	def age
-		@age
-	end
+	# def age
+	#	@age
+	# end
 	
 	# Getter method for ethnicity
-	def ethnicity
-		@ethnicity
-	end
+	# def ethnicity
+	#	@ethnicity
+	# end
 
 end
 
@@ -151,18 +151,7 @@ santas[3].ethnicity
 # => "Russian"
 
 # Test code for Release 4
-# Write a program that creates lots of Santas. If you're on a cloud-based environment, 
-# you may not want to push it past about a hundred Santas. If you're on a faster computer, 
-# you may be able to make lots more than that. Play around with the numbers and see what happens.
 
-# Obviously, no one wants to create ten thousand Santas by hand. That's what computers are for!
-
-# Use our array of example genders and an array of example ethnicities (and feel free to add to it if you like -- 
-# each array could have a lot more options in it!) to create your Santas with a randomly selected gender and a 
-# randomly selected ethnicity. (How do you randomly select an array item? The Array documentation should be able to help you out there!)
-# Set your new Santa's age to a random number between 0 and 140.
-# No need to store your Santas in a data structure, but your program should print out the attributes of 
-# each Santa using the instance methods that give you access to that data.
 santas = []
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
