@@ -25,12 +25,12 @@
 
 class Warrior
 	attr_reader :location
-	attr_accessor :armor, :weapons, :skills
+	attr_accessor :name, :armor, :weapons
 
-	def initialize #(armor=1, weapons, skills)
+	def initialize(name)
+		@name = name
 		@armor = armor
-		@weapons = []
-		@skills = []
+		@weapons = weapons
 	end
 
 	# def change_armor(number)
@@ -47,34 +47,50 @@ class Warrior
 		@weapons
 	end
 
-	def add_skill(skill)
-		@skills << skill
-		@skills
-	end
-
-	def delete_skill(skill)
-		@skills.delete(skill)
-		@skills
-	end
-
 	def engage(location)
 		@location = location
 		p "Your warrior has engaged the enemy at #{location}."
 	end
 end
 
-puts "Welcome to Warrior Creator. Please enter a name for your warrior."
-name = gets.chomp
-name = Warrior.new
+puts "Welcome to Warrior Creator."
+entries = []
+user_info = {}
+loop do
+puts "Please enter a name for your warrior."
+user_name = gets.chomp
+user_info[:Name] = "#{user_name}"
+user_name = Warrior.new(user_name)
 
 puts "Set an armor rating for your warrior."
-armor_rating = gets.chomp
-
+armor_rating = gets.to_i
+user_info[:Armor] = "#{armor_rating}"
 if armor_rating <= 10
-	name.armor=(armor_rating)
-	puts "Your warrior has an armor rating of #{@armor}."
-elsif armor_rating >=11
+	user_name.armor=(armor_rating)
+	puts "Your warrior has an armor rating of #{user_name.armor}."
+elsif armor_rating >= 11
 	puts "Sorry, you can't have armor that heavy."
-else
+else armor_rating == String
 	puts "Invalid input. Please enter a number from 1 to 10."
 end
+
+puts "Add weapons for your warrior."
+user_weapons = gets.chomp
+user_info[:Weapons] = "#{user_weapons}"
+user_weapons.split(' ')
+user_name.weapons=(user_weapons)
+
+
+puts "Where would you like to engage your warrior?"
+user_location = gets.chomp
+user_info[:Location] = "#{user_location}"
+user_name.engage(user_location)
+entries.push(user_info)
+puts "Would you like to create another warrior?"
+create_new = gets.chomp.downcase
+break if create_new == "no"
+
+end
+
+
+p entries
