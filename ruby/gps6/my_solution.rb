@@ -4,8 +4,14 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
-#
+# The "require_relative" keyword is used to link another file of
+# information; in this case, it is used to link the "state_data.rb"
+# so that the information does not have to be written out again
+# in this file. "Require_relative" is used for files that are
+# related to each other and typically within the same project.
+# "Require" is used for files that may be in different directories
+# but may be needed for use in multiple applications.
+
 require_relative 'state_data'
 
 class VirusPredictor
