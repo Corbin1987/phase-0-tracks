@@ -18,9 +18,10 @@
 // Return new string
 
 function reverse(str) {
-	var newStr = str.split("");
-	var arr = newStr.reverse();
-	var result = arr.join("");
+	newStr = str.split("");
+	arr = newStr.reverse();
+	result = arr.join("");
 	return result;
 }
 
+console.log(reverse("hello"));
