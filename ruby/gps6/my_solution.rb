@@ -21,8 +21,8 @@ class VirusPredictor
 	# create a new class instance.
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
-    @population = population
     @population_density = population_density
+  	@population = population
   end
 
   	# Virus effects methods
@@ -103,8 +103,8 @@ alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density],
 alaska.virus_effects
 
 STATE_DATA.each do |state|
-	VirusPredictor.new("state", [:population_density], [:population])
-	
+	state = VirusPredictor.new("state", [:population_density], [:population])
+	p state
 end
 
 #=======================================================================
