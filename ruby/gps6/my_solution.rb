@@ -56,28 +56,27 @@ class VirusPredictor
   end
 
   # Speed of spread method
-  # Takes in parameters of population density and state
   # Runs conditions in order to determine how quickly the outbreak will spread
   # Speed is based on density of population
   # The outbreak will spread more quickly if the population density is higher
   def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
-    speed = 0.0
+    time = 0.0
 
     if @population_density >= 200
-      speed += 0.5
+      time += 0.5
     elsif @population_density >= 150
-      speed += 1
+      time += 1
     elsif @population_density >= 100
-      speed += 1.5
+      time += 1.5
     elsif @population_density >= 50
-      speed += 2
+      time += 2
     else
-      speed += 2.5
+      time += 2.5
     end
 
-    puts " and will spread across the state in #{speed} months.\n\n"
+    puts " and will spread across the state in #{time} months.\n\n"
 
   end
 
@@ -100,6 +99,12 @@ california.virus_effects
 
 alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
 alaska.virus_effects
+
+#========================================================================
+
+# DRIVER CODE
+
+# Create an instance variable for all states and call virus effects method on each state
 
 STATE_DATA.each do |state, state_info|
  temp_state = VirusPredictor.new(state, state_info[:population_density], state_info[:population])
