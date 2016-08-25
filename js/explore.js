@@ -37,12 +37,25 @@ console.log(reverse2("hello"));
 
 // Code to store result of the function in a variable
 
-var reverseResult = reverse("JavaScript")
+var reverseResult = reverse("JavaScript");
 
-console.log(reverseResult)
+console.log(reverseResult);
 
-var reverseResult2 = reverse2("Ruby")
+var reverseResult2 = reverse2("Ruby");
 
-console.log(reverseResult2)
+console.log(reverseResult2);
 
 // Code to print the variable if some condition is true
+
+lovesCars = true;
+lovesCandy = true;
+
+if (lovesCars && lovesCandy) {
+	console.log("Why yes, I do love cars and candy.");
+} else if (lovesCars && !lovesCandy) {
+	console.log("I like candy, but I love cars.");
+} else if (!lovesCars && lovesCandy) {
+	console.log("I'd rather spend money on Twizzlers than gas.");
+} else {
+	console.log("I guess I like something else.");
+}
