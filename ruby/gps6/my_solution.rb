@@ -25,20 +25,19 @@ class VirusPredictor
   	@population = population
   end
 
-  	# Virus effects methods
+  	# Virus effects method
   	# Calls the two private methods
   def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+    predicted_deaths
+    speed_of_spread
   end
 
   private
   # Predicted deaths method
-
   # Run conditional statements based on population density and population
   # in order to determine how many deaths will occur with the outbreak.
   # A higher population density will result in a higher number of deaths from the outbreak
-  def predicted_deaths(population_density, population, state)
+  def predicted_deaths
     # predicted deaths is solely based on population density
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
@@ -61,7 +60,7 @@ class VirusPredictor
   # Runs conditions in order to determine how quickly the outbreak will spread
   # Speed is based on density of population
   # The outbreak will spread more quickly if the population density is higher
-  def speed_of_spread(population_density, state) #in months
+  def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
     speed = 0.0
@@ -102,11 +101,10 @@ california.virus_effects
 alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
 alaska.virus_effects
 
-STATE_DATA.each do |state, info|
-  virus_state = VirusPredictor.new(state, info[:population_density], info[:population])
-p virus_state
+STATE_DATA.each do |state, state_info|
+ temp_state = VirusPredictor.new(state, state_info[:population_density], state_info[:population])
+ temp_state.virus_effects
 end
-
 
 #=======================================================================
 # Reflection Section
