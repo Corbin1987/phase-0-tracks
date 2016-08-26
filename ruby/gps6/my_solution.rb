@@ -113,3 +113,17 @@ end
 
 #=======================================================================
 # Reflection Section
+
+# The "require_relative" keyword is used to link another file of
+# information; in this case, it is used to link the "state_data.rb"
+# so that the information does not have to be written out again
+# in this file. "Require_relative" is used for files that are
+# related to each other and typically within the same project.
+# "Require" is used for files that may be in different directories
+# but may be needed for use in multiple applications.
+
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+# What does require_relative do? How is it different from require?
+# What are some ways to iterate through a hash?
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+# What concept did you most solidify in this challenge?
