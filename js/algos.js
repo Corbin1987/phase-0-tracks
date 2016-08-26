@@ -33,3 +33,18 @@
 // You should not begin coding until you have pseudocoded a complete solution to the problem. Leave your pseudocode in your file as comments.
 
 // Release 0: Find the Longest Phrase
+
+// Take array as parameter
+// Declare variable for new array to be sorted
+// Use .sort method for arrays to sort array (reference from w3schools.com)
+// Return element of array that is sorted as the longest using the
+// length of the original array -1 (the last element in the new array)
+
+function findLongPhrase(arr) {
+	var sortedArr = arr.sort();
+	return sortedArr[arr.length-1];
+}
+
+var sampleArray = ["really, really long", "longest", "long", "longer", "really long"];
+
+console.log(findLongPhrase(sampleArray));
