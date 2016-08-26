@@ -1,16 +1,13 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge with: Edward Eng.
+# We spent 3 hours on this challenge.
 
 # EXPLANATION OF require_relative
 # The "require_relative" keyword is used to link another file of
 # information; in this case, it is used to link the "state_data.rb"
 # so that the information does not have to be written out again
-# in this file. "Require_relative" is used for files that are
-# related to each other and typically within the same project.
-# "Require" is used for files that may be in different directories
-# but may be needed for use in multiple applications.
+# in this file.
 
 require_relative 'state_data'
 
@@ -100,7 +97,7 @@ california.virus_effects
 alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
 alaska.virus_effects
 
-#========================================================================
+#=======================================================================
 
 # DRIVER CODE
 
@@ -112,18 +109,43 @@ STATE_DATA.each do |state, state_info|
 end
 
 #=======================================================================
+
 # Reflection Section
 
-# The "require_relative" keyword is used to link another file of
-# information; in this case, it is used to link the "state_data.rb"
-# so that the information does not have to be written out again
-# in this file. "Require_relative" is used for files that are
-# related to each other and typically within the same project.
-# "Require" is used for files that may be in different directories
-# but may be needed for use in multiple applications.
-
 # What are the differences between the two different hash syntaxes shown in the state_data file?
+
+# The hash in the state_data file uses key value pairs in both the main hash and the nested hash.
+# However, the outer hash uses "" syntax for keys, whereas the inner hash uses : syntax for the keys.
+# The : syntax is used to declare a symbol, which remains unchanging throughout a program. In this
+# case, it makes sense to use : syntax for the inner hash keys, as they refer to properties of
+# population and population density that all the states share, but with different values.
+
 # What does require_relative do? How is it different from require?
+
+# The "require_relative" keyword is used to link another file of information so that the information 
+# does not have to be written out again in this file."Require_relative" is used for files that are 
+# related to each other and typically within the same project. "Require" is used for files that may 
+# be in different directories but are needed for use in multiple applications.
+
 # What are some ways to iterate through a hash?
+
+# There are multiple ways of iterating through a hash with loops, such as using a loop do {|key, value|}
+# syntax or by using a built-in method such as .each, .each_key, or .each_value.
+
 # When refactoring virus_effects, what stood out to you about the variables, if anything?
+
+# At first I didn't realize that the parameter variables were used in the method elsewhere.
+# It then made sense to remove them, and the program worked as it did before. Because the class
+# variables were used in the methods, and because of how the methods were written, it then became
+# odd to me that they were there in the first place. We also changed the speed variable in the
+# speed_of_spread method, since it seemed a bit misleading. Because of how the conditions in the if
+# statements were written, I figured that the speed_of_spread and predicted_deaths methods could
+# be combined, but it would look a bit clunky.
+
 # What concept did you most solidify in this challenge?
+
+# I feel that I have a better understanding of looping through hashes. My pair and I got stuck on
+# Release 5, and we spent a lot of time trying to figure out the correct syntax. When we wrote it
+# out correctly, it made a lot more sense to me, and it didn't seem as difficult as when we were
+# starting to figure it out.
+#
