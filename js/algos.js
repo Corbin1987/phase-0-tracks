@@ -2,9 +2,10 @@
 
 // Release 0: Find the Longest Phrase
 
+// First method
 // Take array as parameter
 // Declare variable for new array to be sorted
-// Use .sort method for arrays to sort array (reference from w3schools.com)
+// Use .sort method for arrays to sort array
 // Use function within sort method to sort by length
 // Return element of array that is sorted as the longest using the
 // length of the original array -1 (the last element in the new array)
@@ -30,15 +31,34 @@ console.log(findLongPhrase(sampleArray2));
 
 console.log(findLongPhrase(sampleArray3));
 
-// function findLongPhrase2(arr) {
-// 	var otherArr = "";
-// 	for (var i = 0; i < arr.length; i ++) {
-// 		if (arr[i].length > otherArr.length) {
-// 			otherArr = arr[i];
-// 		}
-// 	}
-// 	return otherArr;
-// }
+// Second method
+// Take array as parameter
+// Declare variable for new string
+// Use for loop to loop through indices of array
+// Check length of array's indices with for loop
+// Compare length of array's elements to new string length
+// If length of array's elements are longer than new string length,
+// add the element as the variable for new string
+// Repeat process with for loop until the longest element is found
+// Return new string which is now the longest element
+
+function findLongPhrase2(arr) {
+	var newStr = "";
+ 	for (var i = 0; i < arr.length; i ++) {
+		if (arr[i].length > newStr.length) {
+			newStr = arr[i]; 		
+		} 	
+	}
+ 	return newStr;
+}
+
+// Driver code to test second method
+
+console.log(findLongPhrase2(sampleArray));
+
+console.log(findLongPhrase2(sampleArray2));
+
+console.log(findLongPhrase2(sampleArray3));
 
 
 // Release 1: Find a Key-Value Match
@@ -52,6 +72,7 @@ console.log(findLongPhrase(sampleArray3));
 // reason through the problem using the basics you've already learned, rather than looking up slick search functions that will 
 // do the job for you. We'd rather see you write code that you actually understand!
 // Add some driver code that tests both outcomes of your function.
+
 function each(coll, f) {
   if (Array.isArray(coll)) {
     for (var i = 0; i < coll.length; i++) {
@@ -79,10 +100,6 @@ function values(obj) {
   })
   return storage;
 }
-
-// function checkKeyValuePairs(obj, obj2) {
-// 	each()
-// }
 
 console.log(values({name: "Steven", age: 54});
 
