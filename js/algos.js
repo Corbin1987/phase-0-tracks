@@ -1,10 +1,45 @@
+// Corbin Via: DBC Week 7 Solo Challenge
+
 // Release 0: Find the Longest Phrase
-// DO THE THING
-// In algos.js, write a function that takes an array of words or phrases and returns the longest word or phrase in the array. 
-// So if we gave your function the array of ["long phrase","longest phrase","longer phrase"], it would return "longest phrase". 
-// This is a logical reasoning challenge, so try to reason through this based on what you already know, rather than Googling the 
-// fanciest solution or looking up built-in sorting functions. Note that "some string".length will do what you expect in JS.
-// Add driver code that tests your function on a few arrays.
+
+// Take array as parameter
+// Declare variable for new array to be sorted
+// Use .sort method for arrays to sort array (reference from w3schools.com)
+// Use function within sort method to sort by length
+// Return element of array that is sorted as the longest using the
+// length of the original array -1 (the last element in the new array)
+
+function findLongPhrase(arr) {
+	var sortedArr = arr.sort(function (a, b) {
+  		return a.length - b.length;
+		});
+	return sortedArr[arr.length-1];
+}
+
+// Driver code to test sample arrays
+
+var sampleArray = ["really, really long", "longest", "long", "longer", "really long"];
+
+var sampleArray2 = ["shortest", "short", "shorter"];
+
+var sampleArray3 = ["Godzilla", "Mothra", "King Kong"];
+
+console.log(findLongPhrase(sampleArray));
+
+console.log(findLongPhrase(sampleArray2));
+
+console.log(findLongPhrase(sampleArray3));
+
+// function findLongPhrase2(arr) {
+// 	var otherArr = "";
+// 	for (var i = 0; i < arr.length; i ++) {
+// 		if (arr[i].length > otherArr.length) {
+// 			otherArr = arr[i];
+// 		}
+// 	}
+// 	return otherArr;
+// }
+
 
 // Release 1: Find a Key-Value Match
 // DO THE THING
@@ -17,6 +52,39 @@
 // reason through the problem using the basics you've already learned, rather than looking up slick search functions that will 
 // do the job for you. We'd rather see you write code that you actually understand!
 // Add some driver code that tests both outcomes of your function.
+function each(coll, f) {
+  if (Array.isArray(coll)) {
+    for (var i = 0; i < coll.length; i++) {
+      f(coll[i], i);
+    }
+  } else {
+    for (var key in coll) {
+      f(coll[key], key);
+    }
+  }
+}
+
+function keys(obj) {
+  var storage = [];
+  each(obj, function(value, key) {
+    storage.push(key);
+  })
+  return storage;
+}
+​
+function values(obj) {
+  var storage = [];
+  each(obj, function(value) {
+  storage.push(value);
+  })
+  return storage;
+}
+
+// function checkKeyValuePairs(obj, obj2) {
+// 	each()
+// }
+
+console.log(values({name: "Steven", age: 54});
 
 // Release 2: Generate Random Test Data
 // Coming up with examples to test our code with can be tiresome. Let's make a function do all the work instead.
@@ -32,19 +100,3 @@
 
 // You should not begin coding until you have pseudocoded a complete solution to the problem. Leave your pseudocode in your file as comments.
 
-// Release 0: Find the Longest Phrase
-
-// Take array as parameter
-// Declare variable for new array to be sorted
-// Use .sort method for arrays to sort array (reference from w3schools.com)
-// Return element of array that is sorted as the longest using the
-// length of the original array -1 (the last element in the new array)
-
-function findLongPhrase(arr) {
-	var sortedArr = arr.sort();
-	return sortedArr[arr.length-1];
-}
-
-var sampleArray = ["really, really long", "longest", "long", "longer", "really long"];
-
-console.log(findLongPhrase(sampleArray));
