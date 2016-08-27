@@ -195,14 +195,13 @@ console.log(keyOrValueMatch({name: "Corbin", age: 29}, {nickname: "Tamir", years
 
 function randomTestData(num) {
 	var newArr = [];
-	var wordsAmount = num;
 	var count = 0;
 	while count <= num {
 		var randomNum = Math.random();
 		var newNum = randomNum * 10;
-		var charNum = Math.ceil(newnum);
+		var charNum = Math.ceil(newNum);
 		newWord.length = charNum;
-		
+
 		newArr.push(newWord);
 	}
 	return newArr;
