@@ -184,3 +184,26 @@ console.log(keyOrValueMatch({name: "Corbin", age: 29}, {nickname: "Tamir", years
 
 // You should not begin coding until you have pseudocoded a complete solution to the problem. Leave your pseudocode in your file as comments.
 
+// Take integer as parameter
+// Declare variable of new array
+// Set amount of words equal to integer
+// Declare random words to be used in array
+// Use while loop to set condition of counter
+// Increase counter
+// Push random words into array
+// Return array
+
+function randomTestData(num) {
+	var newArr = [];
+	var wordsAmount = num;
+	var count = 0;
+	while count <= num {
+		var randomNum = Math.random();
+		var newNum = randomNum * 10;
+		var charNum = Math.ceil(newnum);
+		newWord.length = charNum;
+		
+		newArr.push(newWord);
+	}
+	return newArr;
+}
