@@ -109,13 +109,13 @@ function each(coll, f) {
 // Return storage array of object keys
 
 function keys(obj) {
-  var storage = [];
-  each(obj, function(value, key) {
-    storage.push(key);
-  });
-  return storage;
+	var storage = [];
+	each(obj, function(value, key) {
+		storage.push(key);
+	});
+	return storage;
 }
-​
+
 // Function to store values of an object
 // Take object as parameter
 // Declare storage array as a variable
@@ -155,6 +155,20 @@ function keyOrValueMatch(obj, obj2) {
 		}
 	}
 }
+
+// Driver code for Release 1
+
+console.log(keys({name: "Steven", age: 54}));
+
+console.log(keys({name: "Tamir", age: 54}));
+
+console.log(values({name: "Steven", age: 54}));
+
+console.log(values({name: "Tamir", age: 54}));
+
+console.log(keyOrValueMatch({name: "Steven", age: 54}, {name: "Tamir", age: 54}));
+
+console.log(keyOrValueMatch({name: "Corbin", age: 29}, {nickname: "Tamir", years: 54}));
 
 // Release 2: Generate Random Test Data
 // Coming up with examples to test our code with can be tiresome. Let's make a function do all the work instead.
