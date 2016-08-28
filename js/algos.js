@@ -165,9 +165,8 @@ console.log(keyOrValueMatch({name: "Corbin", age: 29}, {nickname: "Tamir", years
 // Declare variable of new array as blank array
 // Declare counter variable set at 0
 // Use while loop to set condition of counter less than integer
-// Declare random number with Math.random
-// Multiply random number by 10 and set as new variable newNum
-// Declare character amount as variable equal to newNum rounded up
+// Declare random number with Math.random * 10
+// Declare character amount as variable equal to random number rounded down
 // Character amount will be between 1 - 10 characters
 // Declare newWord equal to empty string
 // Declare variable of possible text
@@ -184,7 +183,7 @@ function randomTestData(num) {
 	var count = 0;
 	while (count < num) {
 		var randomNum = Math.random() * 10;
-		var charNum = Math.ceil(randomNum);
+		var charNum = Math.floor(randomNum);
 		var newWord = '';
 		var possibleText = 'abcdefghijklmnopqrstuvwxyz';
 		for (var i = 0; i <= charNum; i ++) {
