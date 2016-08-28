@@ -206,5 +206,3 @@ while (counter < 10) {
 	console.log(findLongPhrase2(testVariable));
 	counter ++;
 }
-// Add driver code that does the following 10 times: generates an array, prints the array, feeds the array to your 
-// "longest word" function, and prints the result.
