@@ -196,13 +196,17 @@ console.log(keyOrValueMatch({name: "Corbin", age: 29}, {nickname: "Tamir", years
 function randomTestData(num) {
 	var newArr = [];
 	var count = 0;
-	while count <= num {
+	while (count < num) {
 		var randomNum = Math.random();
 		var newNum = randomNum * 10;
 		var charNum = Math.ceil(newNum);
-		newWord.length = charNum;
-
+		var newWord = '';
+		var possibleText = 'abcdefghijklmnopqrstuvwxyz';
+		for (var i = 0; i <= charNum; i ++) {
+			newWord += possibleText.charAt(Math.floor(Math.random() * possibleText.length));
+		}
 		newArr.push(newWord);
+		count ++;
 	}
 	return newArr;
 }
