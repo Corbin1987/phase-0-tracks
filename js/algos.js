@@ -161,9 +161,6 @@ console.log(keyOrValueMatch({name: "Steven", age: 54}, {name: "Tamir", age: 54})
 console.log(keyOrValueMatch({name: "Corbin", age: 29}, {nickname: "Tamir", years: 54}));
 
 // Release 2: Generate Random Test Data
-// Add driver code that does the following 10 times: generates an array, prints the array, feeds the array to your 
-// "longest word" function, and prints the result.
-
 // Take integer as parameter
 // Declare variable of new array as blank array
 // Declare counter variable set at 0
@@ -186,9 +183,8 @@ function randomTestData(num) {
 	var newArr = [];
 	var count = 0;
 	while (count < num) {
-		var randomNum = Math.random();
-		var newNum = randomNum * 10;
-		var charNum = Math.ceil(newNum);
+		var randomNum = Math.random() * 10;
+		var charNum = Math.ceil(randomNum);
 		var newWord = '';
 		var possibleText = 'abcdefghijklmnopqrstuvwxyz';
 		for (var i = 0; i <= charNum; i ++) {
@@ -199,3 +195,17 @@ function randomTestData(num) {
 	}
 	return newArr;
 }
+
+// Driver code for Release 2
+
+var counter = 0;
+while (counter < 10) {
+	var randomNum = Math.random() * 10;
+	var arrayNum = Math.ceil(randomNum);
+	var testVariable = randomTestData(arrayNum);
+	console.log(testVariable);
+	console.log(findLongPhrase2(testVariable));
+	counter ++;
+}
+// Add driver code that does the following 10 times: generates an array, prints the array, feeds the array to your 
+// "longest word" function, and prints the result.
