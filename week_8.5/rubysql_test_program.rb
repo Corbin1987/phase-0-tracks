@@ -1,39 +1,37 @@
 # Corbin Via: DBC Week 8.5 Assignment: Combining SQL and Ruby
 
-# require gems
+# Use SQLite3 to store data
 require 'sqlite3'
 
-# create SQLite3 database
-db = SQLite3::Database.new("kittens.db")
+def create_entry(db, item, amount)
+  db.execute("INSERT INTO db (item, amount) VALUES (?, ?)", [item, amount])
+end
+
+puts "Welcome to Grocery List Maker."
+puts "Please enter a store name."
+db = gets.chomp
+db = SQLite3::Database.new(" #{db}.db ")
 db.results_as_hash = true
 
-# learn about fancy string delimiters
 create_table_cmd = <<-SQL
-  CREATE TABLE IF NOT EXISTS kittens(
+  CREATE TABLE IF NOT EXISTS db(
     id INTEGER PRIMARY KEY,
-    name VARCHAR(255),
-    age INT
+    item VARCHAR(255),
+    amount INT
   )
 SQL
 
-# create a kittens table (if it's not there already)
 db.execute(create_table_cmd)
 
-# add a test kitten
-# db.execute("INSERT INTO kittens (name, age) VALUES ('Bob', 10)")
+puts "How many items would you like to enter into this list?"
+amount_of_items = gets.to_i
 
-# add LOOOOTS of kittens!
-def create_kitten(db, name, age)
-  db.execute("INSERT INTO kittens (name, age) VALUES (?, ?)", [name, age])
+count = 0
+while count < amount_of_items
+	puts "Please enter an item."
+	user_item = gets.chomp
+	puts "Please enter an amount."
+	user_amount = gets.chomp.to_i
+	create_entry(db, user_item, user_amount)
+	count += 1
 end
-
-10000.times do
-  create_kitten(db, Faker::Name.name, 0)
-end
-
-# explore ORM by retrieving data
-# kittens = db.execute("SELECT * FROM kittens")
-# kittens.each do |kitten|
-#  puts "#{kitten['name']} is #{kitten['age']}"
-# end
-
