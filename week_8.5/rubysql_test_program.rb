@@ -4,12 +4,10 @@
 
 # Use SQLite3 to store data
 require 'sqlite3'
-
 # Method to create an entry in table
 def create_entry(db, item, amount)
    db.execute("INSERT INTO list (item, amount) VALUES (?, ?)", [item, amount])
 end
-
 # Create table method
 # Table called list will be created with values of item and amount
 create_table_cmd = <<-SQL
@@ -52,18 +50,4 @@ while count < amount_of_items
 	create_entry(db, user_item, user_amount)
 	# Increase counter and repeat loop
 	count += 1
-end
-
-loop do
-	puts "Would you like to update an item or delete an item from this list?"
-	user_update = gets.chomp
-	if user_update == "no"
-		puts "Thank you for using Grocery List Maker."
-		break
-	elsif user_update == "yes"
-		puts "OK"
-		break
-	else
-		puts "Please enter 'yes' or 'no' to continue."
-	end	
 end
