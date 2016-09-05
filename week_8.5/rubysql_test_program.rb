@@ -3,18 +3,13 @@
 # Use SQLite3 to store data
 require 'sqlite3'
 
-def create_entry(db, item, amount)
-  db.execute("INSERT INTO db (item, amount) VALUES (?, ?)", [item, amount])
-end
-
-puts "Welcome to Grocery List Maker."
-puts "Please enter a store name."
-db = gets.chomp
-db = SQLite3::Database.new(" #{db}.db ")
+puts "Welcome to Grocery List Maker.\n Please enter a name for your data:"
+user_input = gets.chomp
+db = SQLite3::Database.new("#{user_input}.db")
 db.results_as_hash = true
 
 create_table_cmd = <<-SQL
-  CREATE TABLE IF NOT EXISTS db(
+  CREATE TABLE IF NOT EXISTS list(
     id INTEGER PRIMARY KEY,
     item VARCHAR(255),
     amount INT
@@ -22,6 +17,11 @@ create_table_cmd = <<-SQL
 SQL
 
 db.execute(create_table_cmd)
+
+def create_entry(db, item, amount)
+   db.execute("INSERT INTO list (item, amount) VALUES (?, ?)", [item, amount])
+ end
+
 
 puts "How many items would you like to enter into this list?"
 amount_of_items = gets.to_i
