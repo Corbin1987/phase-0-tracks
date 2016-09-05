@@ -54,5 +54,16 @@ while count < amount_of_items
 	count += 1
 end
 
-puts "Would you like to update an item or delete an item from this list?"
-user_update = gets.chomp
+loop do
+	puts "Would you like to update an item or delete an item from this list?"
+	user_update = gets.chomp
+	if user_update == "no"
+		puts "Thank you for using Grocery List Maker."
+		break
+	elsif user_update == "yes"
+		puts "OK"
+		break
+	else
+		puts "Please enter 'yes' or 'no' to continue."
+	end	
+end
