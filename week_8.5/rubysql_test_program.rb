@@ -11,7 +11,7 @@ end
 # Create table method
 # Table called list will be created with values of item and amount
 create_table_cmd = <<-SQL
-  CREATE TABLE IF NOT EXISTS list(
+  CREATE TABLE IF NOT EXISTS list (
     id INTEGER PRIMARY KEY,
     item VARCHAR(255),
     amount INT
@@ -23,9 +23,9 @@ SQL
 # Greeting message
 puts "Welcome to Grocery List Maker.\nPlease enter a name for your data:"
 # Collect user input
-user_input = gets.chomp
+user_name = gets.chomp
 # User input is stored as new database name
-db = SQLite3::Database.new("#{user_input}.db")
+db = SQLite3::Database.new("#{user_name}.db")
 # Database results are stored as a hash
 db.results_as_hash = true
 # Create table method is called by execute method
@@ -51,3 +51,5 @@ while count < amount_of_items
 	# Increase counter and repeat loop
 	count += 1
 end
+# Final printout message
+puts "Thank you for using Grocery List Maker. Your information has been saved."
