@@ -1,0 +1,14 @@
+#Corbin Via: DBC Week 9.1 Assignment
+
+##web_servers
+
+*What are some of the key design philosophies of the Linux operating system?
+	*An important philosophy of the Linux operating system is to have programs "do one thing and do it well." This means that a program should be designed for a specific feature and should not be cluttered with other unnecessary features.
+	*Another important design philosophy is that a program should be small and not overly large. A program should be readable and allow for editing in a small scale rather than one large program with many, many lines of code. This will allow for easier debugging, as it is more difficult to debug a large program.
+	*Another design philosophy is that programs should be able to work with each other. This follows with the design philosophies of having programs separated for different tasks as well as being smaller in scale. Many small-scale programs can be tailored to work together efficiently.
+
+*In your own words, what is a VPS (virtual private server)? What, according to your research, are the advantages of using a VPS?
+	*A VPS is a virtual operating system that mimics the tasks of other known operating systems such as Mac or Windows. A VPS is essentially a computer but without any of the hardware to which users are typically accustomed. The biggest advantage to using a VPS is that is an experimental environment for software. Software can be tested in a VPS without the threat of causing harm to one's actual device. Another advantage is that it tends to be less costly for a user as opposed to using an actual physical server.
+
+*Optional bonus question: Why is it considered a bad idea to run programs as the root user on a Linux system?
+	*It is not good practice to run programs as the root user on a Linux system because changes can affect the entire operating system. Since the root user is considered an administrator of the operating system, any permanent changes will affect the operating system across the board with other users. This also decreases the lecel of security for a user, as using a system without a password will make that system more susceptible to outside involvement.

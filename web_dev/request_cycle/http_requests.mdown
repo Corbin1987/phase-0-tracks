@@ -1,0 +1,19 @@
+#Corbin Via: DBC Week 9.1 Assignment
+
+##http_requests
+
+*What are some common HTTP status codes?
+	* 200: This code means that a HTTP request was successful.
+	* 206: This code means that some content from a HTTP request was retrieved.
+	* 301: This code means that HTTP requests should be directed to a different URL.
+	* 401: This code means that a user is unauthorized to make a HTTP request to a particular site.
+	* 404: This code means that a HTTP request could not find the website.
+
+*What is the difference between a GET request and a POST request? When might each be used?
+	*A GET request will ask for data from a specific place, such as a browser getting information from a website to render.
+		*A GET request is submitted when a user types in a website to view.
+	*A POST request will submit data to a specific place, such as when a user uploads a file or submits information to a site.
+		* A POST request is submitted when a user enters information for logging into a website.
+
+*Optional bonus question: What is a cookie (the technical kind, not the delicious kind)? How does it relate to HTTP requests?
+	*A cookie, aside from being a preferred treat of a certain Sesame Street character, is data that is sent from a website and is stored in a web browser. This information is stored on the web browser for future navigating. For instance, if a user specifies certain serach criteria and submits this, cookies will be stored on the web browser so that the information is kept on the next page that the user sees. This can also apply to a user who is browsing an online shopping site, as cookies will allow information to be stored about the user's purchases. When a HTTP request is made, a browser will review cookies to see if some information is already present for the user so that it can render the page with this information, as opposed to rendering a page as though it has not ever been viewed in the web browser.
