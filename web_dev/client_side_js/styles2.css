@@ -1,0 +1,64 @@
+/* Works-cited.html */
+@media screen and (max-width: 500px) {
+	body {
+		margin: 1%;
+		padding: 1%;
+	}
+}
+@media screen and (max-width: 500px) {
+	ol {
+		font-size: .7em;
+	}
+}
+@media screen and (max-width: 500px) {
+	.works-cited-link {
+		word-wrap: break-word;
+	}
+}
+/* <li class="works-cited-list-item"> */
+.works-cited-list-item {
+	color: white;
+}
+/* <li class="works-cited-photo-url"> */
+.works-cited-photo-url {
+	color: white;
+}
+/* <a href class="works-cited-link"> */
+.works-cited-link {
+	color: white;
+	font-family: "Courier New", Courier;
+	font-size: .8em;
+}
+.works-cited-link:link {
+	color: white;
+}
+.works-cited-link:visited {
+	color: hotpink;
+}
+.works-cited-link:hover {
+	color: hotpink;
+}
+.works-cited-link:active {
+	color: hotpink;
+}
+/* <body id="works-cited"> */
+#works-cited {
+	background: green;
+}
+/* <h1 id="image-urls"> */
+#image-urls {
+	color: white;
+	font-size: 2em;
+	font-family: "Times New Roman", Times;
+	text-align: center;
+	margin: 1%;
+	padding: 10px;
+	border: 2px solid white;
+	display: block;
+}
+/* <footer id="works-cited-footer"> */
+#works-cited-footer {
+	text-align: center;
+	padding: 5px;
+	border: 1px dotted blue;
+}
