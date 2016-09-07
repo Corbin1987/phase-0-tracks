@@ -27,9 +27,24 @@ function changeColorToOrange() {
 	body.style.background = "orange";
 }
 
+function changeColorToPurple() {
+	var body = document.getElementById("main-page");
+	body.style.background = "purple";
+}
+
+function changeColorToGreen() {
+	var body = document.getElementById("main-page");
+	body.style.background = "green";
+}
+
 var mainPageHeader = document.getElementById("main-page-header");
 var mainPageHeader2 = document.getElementById("main-page-header-2");
 var mainPageHeader3 = document.getElementById("main-page-header-3");
+var orangeButton = document.getElementById("orange-button");
+var redButton = document.getElementById("red-button");
+var whiteButton = document.getElementById("white-button");
+var purpleButton = document.getElementById("purple-button");
+var greenButton = document.getElementById("green-button");
 
 mainPageHeader.addEventListener("click", addBorder);
 mainPageHeader.addEventListener("dblclick", takeAwayBorder);
@@ -40,11 +55,8 @@ mainPageHeader2.addEventListener("dblclick", takeAwayBorder);
 mainPageHeader3.addEventListener("click", addBorder);
 mainPageHeader3.addEventListener("dblclick", takeAwayBorder);
 
-var redButton = document.getElementById("red-button");
 redButton.addEventListener("click", changeColorToRed);
-
-var whiteButton = document.getElementById("white-button");
 whiteButton.addEventListener("click", changeColorToWhite);
-
-var orangeButton = document.getElementById("orange-button");
 orangeButton.addEventListener("click", changeColorToOrange);
+purpleButton.addEventListener("click", changeColorToPurple);
+greenButton.addEventListener("click", changeColorToGreen);
