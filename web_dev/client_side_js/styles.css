@@ -1,0 +1,92 @@
+/* index.html */
+@media only screen and (max-width: 500px) {
+	body {
+		margin: 1%;
+		padding: 1%;
+	}
+}
+/* <footer> */
+footer {
+	background: blue;
+	color: white;
+	margin: 1%;
+}
+/* <table> */
+table {
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid blue;
+}
+/* <section class="elements"> */
+.elements {
+	background: blue;
+	color: white;
+	margin: 1%;
+}
+/* <a href class="main-page-link"> */
+.main-page-link {
+	color: white;
+	font-family: "Courier New", Courier;
+	font-size: .8em;
+}
+.main-page-link:link {
+	color: white;
+}
+.main-page-link:visited {
+	color: hotpink;
+}
+.main-page-link:hover {
+	color: hotpink;
+}
+.main-page-link:active {
+	color: hotpink;
+}
+/* <body id="main-page"> */
+#main-page {
+	background: orange;
+}
+/* <h1 id="main-page-header"> */
+#main-page-header {
+	text-align: center;
+	color: gray;
+	background-image: url("woven-paper.jpg");
+	margin: 1%;
+}
+/* <h2 id="main-page-header-2"> */
+#main-page-header-2 {
+	text-align: center;
+	font-style: italic;
+	font-family: "Comic Sans MS", cursive;
+}
+/* <h3 id="main-page-header-3"> */
+#main-page-header-3 {
+	font-variant: small-caps;
+	font-family: "Times New Roman", Times;
+}
+/* <section id="buttons"> */
+#buttons {
+	text-align: center;
+	border: 2px solid black;
+	padding: 1%;
+}
+/* <span id="carbon"> */
+#carbon {
+	font-weight: bold;
+}
+/* <span id="gold" */
+#gold {
+	font-weight: bold;
+}
+/* <span id="titanium"> */
+#titanium {
+	font-weight: bold;
+}
+/* <span id="oxygen"> */
+#oxygen {
+	font-weight: bold;
+}
+/* <span id="notes"> */
+#notes {
+	font-variant: small-caps;
+	font-weight: bold;
+}
