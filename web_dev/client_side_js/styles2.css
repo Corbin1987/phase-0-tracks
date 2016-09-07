@@ -1,16 +1,16 @@
 /* Works-cited.html */
-@media screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
 	body {
 		margin: 1%;
 		padding: 1%;
 	}
 }
-@media screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
 	ol {
 		font-size: .7em;
 	}
 }
-@media screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
 	.works-cited-link {
 		word-wrap: break-word;
 	}
