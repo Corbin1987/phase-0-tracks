@@ -1,6 +1,7 @@
 # require gems
 require 'sinatra'
 require 'sqlite3'
+require 'sinatra/reloader'
 
 set :public_folder, File.dirname(__FILE__) + '/static'
 
@@ -19,9 +20,20 @@ end
 
 # create new students via
 # a form
+
 post '/students' do
   db.execute("INSERT INTO students (name, campus, age) VALUES (?,?,?)", [params['name'], params['campus'], params['age'].to_i])
   redirect '/'
 end
 
-# add static resources
+get '/grades' do
+  erb :grades
+end
+
+post '/grades' do
+  name = params[:name]
+  db.execute("UPDATE students SET grades=? WHERE name=?", [params['grades']], name)
+  redirect '/'
+end
+
+# add static resourcesUPDATE synthesizers SET key_count=61 WHERE analogue="true";

@@ -12,5 +12,11 @@
       <li><%= student['name'] %>, <%= student['age'] %></li>
     <% end %>
   </ul>
+  <p>Click <a href="grades">here</a> to enter a grade.</p>
+  <ul>
+    <% @students.each do |student| %>
+      <li><%= student['name'] %>, <%= student['grades'] %></li>
+    <% end %>
+  </ul>
 </body>
 </html>
