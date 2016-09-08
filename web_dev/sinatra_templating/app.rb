@@ -1,6 +1,7 @@
 # require gems
 require 'sinatra'
 require 'sqlite3'
+require 'sinatra/reloader'
 
 set :public_folder, File.dirname(__FILE__) + '/static'
 
@@ -31,9 +32,8 @@ end
 
 post '/grades' do
   name = params[:name]
-  db.execute("SELECT * FROM students WHERE name =?", [name])
-  db.execute("ALTER TABLE students ADD COLUMN grades VARCHAR(255)")
-  db.execute("INSERT INTO students (grade) VALUES (?)", params['grade'])
+  db.execute("UPDATE students SET grades=? WHERE name=?", [params['grades']], name)
+  redirect '/'
 end
 
-# add static resources
+# add static resourcesUPDATE synthesizers SET key_count=61 WHERE analogue="true";
