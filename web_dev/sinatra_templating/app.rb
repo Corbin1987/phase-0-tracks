@@ -19,9 +19,21 @@ end
 
 # create new students via
 # a form
+
 post '/students' do
   db.execute("INSERT INTO students (name, campus, age) VALUES (?,?,?)", [params['name'], params['campus'], params['age'].to_i])
   redirect '/'
+end
+
+get '/grades' do
+  erb :grades
+end
+
+post '/grades' do
+  name = params[:name]
+  db.execute("SELECT * FROM students WHERE name =?", [name])
+  db.execute("ALTER TABLE students ADD COLUMN grades VARCHAR(255)")
+  db.execute("INSERT INTO students (grade) VALUES (?)", params['grade'])
 end
 
 # add static resources
