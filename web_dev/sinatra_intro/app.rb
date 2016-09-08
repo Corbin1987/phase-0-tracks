@@ -74,6 +74,12 @@ end
 # maybe for students who have a certain first name, or some other attribute. If you like, you can 
 # simply modify the home page to take a query parameter, and filter the students displayed if a query parameter is present.
 
-get '/students_above_40' do
-	db.execute("SELECT * FROM students WHERE age=?", [params[:age]] > 40)
+get '/students_by_ages' do
+	age = params[:age]
+	if age
+		student = db.execute("SELECT * FROM students WHERE age=?", [age])
+		student.to_s
+	else
+		"You need to put an age."
+	end
 end
