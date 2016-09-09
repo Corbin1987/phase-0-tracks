@@ -1,8 +1,29 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset="UTF-8">
+	<title>Corbin Via's GitHub project site</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-	$("p").mouseenter(function(){
-		$("#main-page-header").fadeOut(3000);
-	});
+    $("button").click(function(){
+        $("h1").fadeOut(slow);
+    });
 });
 </script>
+</head>
+<body id="main-page">
+	<header>
+		<h1 id="main-page-header">Welcome to Corbin's very first webpage!</h1>
+		<h2 id="main-page-header-2">"A nice place to stay for a while"</h2>
+		<section id="buttons">
+			<button id="orange-button">Change the background color to orange</button>
+			<button id="red-button">Change the background color to red</button>
+			<button id="white-button">Change the background color to white</button>
+			<button id="purple-button">Change the background color to purple</button>
+			<button id="green-button">Change the background color to green</button>
+		</section>
+		<h3 id="main-page-header-3">Let's review some favorite elements!</h3>
+	</header>
+</body>
+</html>
