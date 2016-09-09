@@ -40,18 +40,36 @@ $(function(){
 });
 
 $(function(){
-	$("img").on({
-		mouseenter: function(){
-			$(this).css({"height": "200px", "width": "300px"});
-		},
-		mouseleave: function(){
-			$(this).css({"height": "100px", "width": "150px"});
-		}
-	});
+    $("img").on({
+        mouseenter: function(){
+            $(this).css({"height": "200px", "width": "300px"});
+        },
+        mouseleave: function(){
+            $(this).css({"height": "100px", "width": "150px"});
+        }
+    });
 });
 
 $(function(){
-    $(".elements").click(function(){
-        $("ul").slideToggle("slow");
+    $("#carbon-description").click(function(){
+        $("#carbon-list").slideToggle("slow");
+    });
+});
+
+$(function(){
+    $("#gold-description").click(function(){
+        $("#gold-list").slideToggle("slow");
+    });
+});
+
+$(function(){
+    $("#titanium-description").click(function(){
+        $("#titanium-list").slideToggle("slow");
+    });
+});
+
+$(function(){
+    $("#oxygen-description").click(function(){
+        $("#oxygen-list").slideToggle("slow");
     });
 });
