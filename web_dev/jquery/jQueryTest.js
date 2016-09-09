@@ -1,3 +1,7 @@
+// Corbin Via: DBC Week 9.3 assignment
+
+// These functions apply to my GitHub website: https://corbin1987.github.io/. I've included this file in my GitHub website repository to show these effects.
+
 $(function(){
     $("#orange-button").click(function(){
         $("body").css("background", "orange");
