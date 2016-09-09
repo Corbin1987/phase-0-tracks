@@ -1,22 +1,3 @@
-// $(document).ready(function(){
-//     $("#main-page-header").mouseenter(function(){
-//         $(this).fadeOut(4000);
-//     });
-// });
-// $(document).ready(function(){
-//     $("#main-page-header").mouseleave(function(){
-//         $(this).fadeIn(4000);
-//     });
-// });
-
-// <section id="buttons">
-//             <button id="orange-button">Change the background color to orange</button>
-//             <button id="red-button">Change the background color to red</button>
-//             <button id="white-button">Change the background color to white</button>
-//             <button id="purple-button">Change the background color to purple</button>
-//             <button id="green-button">Change the background color to green</button>
-//         </section>
-
 $(function(){
     $("#orange-button").click(function(){
         $("body").css("background", "orange");
