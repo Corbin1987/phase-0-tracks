@@ -9,7 +9,45 @@
 //     });
 // });
 
-$(document).ready(function(){
+// <section id="buttons">
+//             <button id="orange-button">Change the background color to orange</button>
+//             <button id="red-button">Change the background color to red</button>
+//             <button id="white-button">Change the background color to white</button>
+//             <button id="purple-button">Change the background color to purple</button>
+//             <button id="green-button">Change the background color to green</button>
+//         </section>
+
+$(function(){
+    $("#orange-button").click(function(){
+        $("body").css("background", "orange");
+    });
+});
+
+$(function(){
+    $("#red-button").click(function(){
+        $("body").css("background", "red");
+    });
+});
+
+$(function(){
+    $("#white-button").click(function(){
+        $("body").css("background", "white");
+    });
+});
+
+$(function(){
+    $("#purple-button").click(function(){
+        $("body").css("background", "purple");
+    });
+});
+
+$(function(){
+    $("#green-button").click(function(){
+        $("body").css("background", "green");
+    });
+});
+
+$(function(){
     $("span").on({
         mouseenter: function(){
             $(this).css("font-size", "1.5em");
