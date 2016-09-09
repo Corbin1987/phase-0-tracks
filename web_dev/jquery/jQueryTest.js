@@ -22,7 +22,7 @@ $(document).ready(function(){
 $(function(){
 	$("img").on({
 		mouseenter: function(){
-			$(this).css({"height": "250px", "width": "375px"});
+			$(this).css({"height": "200px", "width": "300px"});
 		},
 		mouseleave: function(){
 			$(this).css({"height": "100px", "width": "150px"});
